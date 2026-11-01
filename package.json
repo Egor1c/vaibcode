@@ -1,0 +1,14 @@
+{
+  "name": "living-room-tv",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node scripts/serve.mjs",
+    "build": "node scripts/package.mjs",
+    "test": "node tests/ui.cjs"
+  },
+  "devDependencies": {
+    "@webos-tools/cli": "3.2.6",
+    "playwright": "1.58.2"
+  }
+}

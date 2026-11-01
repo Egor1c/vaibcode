@@ -1,0 +1,14 @@
+{
+  "id": "com.vaibcode.livingroom",
+  "version": "1.0.0",
+  "vendor": "Vaibcode",
+  "type": "web",
+  "main": "index.html",
+  "title": "Гостиная",
+  "icon": "assets/icon.png",
+  "largeIcon": "assets/large-icon.png",
+  "resolution": "1920x1080",
+  "bgColor": "#090d16",
+  "iconColor": "#090d16",
+  "disableBackHistoryAPI": true
+}

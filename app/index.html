@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Гостиная</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="Гостиная, главный экран"><span class="brand-mark">◈</span> гостиная<span class="brand-dot">.</span></a>
+    <nav aria-label="Главное меню">
+      <button class="nav-button active" id="home">Главная</button>
+      <button class="nav-button" id="services-nav">Кинотеатры</button>
+      <button class="nav-button" id="inputs-nav">ТВ и входы</button>
+    </nav>
+    <div class="top-right"><span id="clock" aria-label="Время"></span><button id="settings-button" class="round-button" aria-label="Настроить экран">⚙</button></div>
+  </header>
+
+  <main>
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="landscape" aria-hidden="true"><div class="sun"></div><div class="mountain far"></div><div class="mountain middle"></div><div class="mountain near"></div><div class="landscape-grain"></div></div>
+      <div class="hero-copy">
+        <div class="eyebrow"><span></span> ВАШ ЛИЧНЫЙ КИНОЗАЛ</div>
+        <h1 id="hero-title">Хороший вечер.<br>Большое кино.</h1>
+        <p>Любимые истории — в одном месте.<br>Выберите, с чего начнётся ваш вечер.</p>
+        <button id="choose-service" class="primary-button"><span class="play-icon">▶</span> Выбрать кинотеатр</button>
+      </div>
+      <div class="hero-caption" aria-hidden="true"><span class="caption-line"></span> МЕНЬШЕ ЛИШНЕГО. БОЛЬШЕ КИНО.</div>
+      <span class="hero-number" aria-hidden="true">01 / HOME</span>
+    </section>
+
+    <section class="service-section" aria-labelledby="services-title">
+      <div class="section-heading"><div><span class="section-kicker">ВСЕГДА ПОД РУКОЙ</span><h2 id="services-title">Ваши кинотеатры</h2></div><span class="section-note">Выберите настроение</span></div>
+      <div id="services" class="service-grid"></div>
+      <div id="empty-state" hidden>Все карточки скрыты. Верните нужные сервисы в настройках.</div>
+    </section>
+
+    <section class="inputs-section" aria-labelledby="inputs-title">
+      <div class="section-heading"><h2 id="inputs-title">Телевизор и устройства</h2><span class="section-note">Эфир и внешние источники</span></div>
+      <div id="inputs" class="input-grid"></div>
+    </section>
+  </main>
+  <footer><span><span class="footer-dot"></span> Пространство для ваших историй</span><span>Стрелки — выбор <b>·</b> OK — открыть <b>·</b> Назад — вернуться</span></footer>
+
+  <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+  <dialog id="settings-dialog" aria-labelledby="settings-title">
+    <div class="dialog-top"><div><span class="section-kicker">ВАШ ЭКРАН</span><h2 id="settings-title">Только то, что нравится</h2></div><button class="round-button" id="close-settings" aria-label="Закрыть настройки">✕</button></div>
+    <p class="dialog-description">Скройте лишние карточки. Если сервис не открывается, укажите ID установленного приложения из Dev Manager.</p>
+    <div id="service-settings"></div>
+    <p class="settings-footnote">Этот экран открывает уже установленные приложения. Подписки приобретаются отдельно. Автозапуск и замена системного Home не настроены.</p>
+    <button id="reset-settings" class="secondary-button">Вернуть исходные настройки</button>
+  </dialog>
+  <script src="app.js"></script>
+</body>
+</html>
